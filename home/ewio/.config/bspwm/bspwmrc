@@ -1,0 +1,32 @@
+#! /bin/sh
+
+bspc monitor HDMI-0 -d I II III IV V VI VII VIII
+bspc monitor HDMI-1 -d IX X
+
+bspc config window_gap		16
+
+bspc config borderless_monocle	true
+bspc config gapless_monocle	true
+bspc config border_width	1
+bspc config single_monocle	true
+bspc config normal_border_color #282828
+bspc config active_border_color #282828
+
+bspc rule -a feh state=floating
+bspc rule -a Pavucontrol state=floating
+bspc rule -a '*:*:Plover' state=floating desktop=X
+
+
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+xrdb .Xresources &
+
+feh --bg-fill /home/ewio/.config/bg.png &
+
+pulseaudio -D &
+
+compton -b &
+
+conky -b -d &
+
+/home/ewio/.local/bin/plover.AppImage &
