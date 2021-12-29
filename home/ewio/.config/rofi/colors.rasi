@@ -1,0 +1,5 @@
+* {
+    bg: #2b3339ff;
+    fg: #d3c6aaff;
+    hl: #a7c080ff;
+}

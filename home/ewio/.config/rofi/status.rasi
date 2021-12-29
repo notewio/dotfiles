@@ -1,0 +1,40 @@
+configuration {
+    show-icons:         false;
+    monitor:            "HDMI-0";
+    font:               "SF Mono 24";
+}
+
+@import "colors.rasi"
+
+* {
+    background-color:   @bg;
+    text-color:         @fg;
+}
+
+window {
+    width:              480px;
+}
+
+entry {
+    enabled:            false;
+}
+
+inputbar {
+    children:           [ prompt ];
+}
+
+mainbox {
+    padding:            48px;
+}
+
+listview {
+    lines:              1;
+    columns:            2;
+    spacing:            16px;
+}
+
+element {
+    font:               "SF Mono 110";
+    border:             0 0 4px 0;
+    border-color:       @hl;
+}

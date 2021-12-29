@@ -9,6 +9,8 @@ super + Return
 # program launcher
 super + @space
 	rofi -show
+super + shift + @space
+    $HOME/.config/rofi/status.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -16,11 +18,11 @@ super + Escape
 
 # media keys
 XF86AudioPlay
-	cmus-remote --pause
+    playerctl play-pause
 XF86AudioNext
-	cmus-remote --next
+	playerctl next
 XF86AudioPrev
-	cmus-remote --prev
+	playerctl prev
 XF86AudioRaiseVolume
     pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioLowerVolume
