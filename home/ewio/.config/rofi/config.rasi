@@ -1,0 +1,13 @@
+@theme "theme"
+
+configuration {
+    modi:                   "drun,window";
+    sidebar-mode:           true;
+    display-drun:           "->";
+    drun-display-format:    "{name}";
+    display-window:         "[]";
+    show-icons:             true;
+
+    me-select-entry:        "";
+    me-accept-entry:        [ MousePrimary, MouseDPrimary ];
+}
