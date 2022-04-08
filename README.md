@@ -1,5 +1,7 @@
 # dotfiles
 
+![preview](preview.png)
+
 i use:
 
 * arch, btw
