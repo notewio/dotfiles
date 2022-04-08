@@ -1,0 +1,14 @@
+#!/bin/bash
+
+ORIENTATION="swaymsg -t get_outputs | grep Transform"
+INPUTS="$(swaymsg -t get_inputs | grep -E 'identifier.*Wacom' | awk '{print substr($2, 2, length($2)-3)}')"
+
+if $ORIENTATION | grep transform | grep 90; then
+    swaymsg output eDP-1 transform 0
+else
+    swaymsg output eDP-1 transform 90
+fi
+
+for line in $INPUTS ; do
+    swaymsg input "$line" map_to_output eDP-1;
+done

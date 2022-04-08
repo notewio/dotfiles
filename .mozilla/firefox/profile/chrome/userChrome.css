@@ -1,0 +1,15 @@
+.tab-background {
+  border-radius: 0 0 0 0 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  margin-block: 1px 0 !important;
+}
+.tab-background:is([selected], [multiselected]):-moz-lwtheme {
+  border-top: 2px solid var(--lwt-tab-line-color, var(--lwt-tabs-border-color, currentColor)) !important;
+}
+#tabbrowser-tabs {
+  padding: 0 12px;
+}
+#navigator-toolbox {
+  border-bottom: 0px !important;
+}

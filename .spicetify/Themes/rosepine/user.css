@@ -1,0 +1,79 @@
+.main-topBar-historyButtons .main-topBar-button,
+.main-userWidget-box {
+    background-color: transparent !important;
+}
+
+.B0VIs50K6LXh5MDmmmJs .icV9eS36uZs9fhQmUujh {
+    box-shadow: none;
+}
+.main-cardImage-imageWrapper {
+    box-shadow: 0 8px 12px rgba(var(--spice-rgb-shadow),.5);
+}
+
+.main-moreButton-button,
+.jmDgrWNcOkndhQMPKu4y,
+._o8Iuf_330KFh6L9Os2E,
+._IpuqxWXxHiUUiIq7uH4,
+.YuL8TZO5okStcwZtm4zm {
+    color: var(--spice-subtext) !important;
+}
+
+.main-playButton-PlayButton.main-playButton-primary {
+    color: var(--spice-main) !important;
+}
+
+.main-contextMenu-menuItemButton {
+    color: var(--spice-text) !important;
+}
+
+.main-topBar-UpgradeButton,
+.main-leaderboardComponent-container,
+a[href="/collection/episodes"],
+.hx2D0g_ursHte5bm62U2,
+.main-shelf-shelf[aria-label="Episodes for you"],
+.main-shelf-shelf[aria-label="Your Week Informed"] {
+    display: none !important;
+}
+
+/* Spicetify Default */
+.main-rootlist-rootlistDividerGradient {
+    background: unset;
+}
+
+input {
+    background-color: unset !important;
+    border-bottom: solid 1px var(--spice-text) !important;
+    border-radius: 0 !important;
+    padding: 6px 10px 6px 48px;
+    color: var(--spice-text) !important;
+}
+
+.main-topBar-background {
+    background-color: var(--spice-main) !important;
+}
+.main-topBar-overlay {
+    display: none !important;
+}
+
+.main-home-homeHeader,
+.x-entityHeader-overlay,
+.x-actionBarBackground-background,
+.main-actionBarBackground-background,
+.main-entityHeader-overlay,
+.main-entityHeader-backgroundColor
+{
+    background-color: unset !important;
+    background-image: unset !important;
+}
+.connect-title, .connect-header {
+    display: none;
+}
+
+.main-entityHeader-shadow,
+.connect-device-list-container {
+    box-shadow: 0 4px 20px rgba(var(--spice-rgb-shadow), 0.2);
+}
+
+.main-entityHeader-background.main-entityHeader-overlay:after {
+    background-image: linear-gradient(transparent,transparent),linear-gradient(var(--spice-main), var(--spice-main));
+}

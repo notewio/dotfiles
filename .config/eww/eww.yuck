@@ -1,0 +1,69 @@
+(defpoll TIME :interval "20s" `date +\"%H:%M\"`)
+(defpoll DATE :interval "5h" `date +\"%a %b %-d\" | tr "[:upper:]" "[:lower:]"`)
+(defpoll BATTERY :interval "40s" `cat /sys/class/power_supply/BAT0/capacity`)
+(defpoll BATTERY_STATUS :interval "40s"
+    `cat /sys/class/power_supply/BAT0/status`)
+(defpoll NETWORK :interval "10m" `nmcli -t -f NAME c show --active | tr "[:upper:]" "[:lower:]"`)
+(defpoll TEMPS :interval "40s" `cat /sys/class/thermal/thermal_zone6/temp | rev | cut -c 4- | rev`)
+(defpoll DISK :interval "5h" `df -hl / | awk '{print $5}' | tail -n 1 | cut -c -2`)
+(defpoll RAM :interval "40s" `free | grep Mem | awk '{print $3/$2 * 100}'`)
+
+(defwindow dashboard
+    :monitor 0
+    :geometry (geometry :x "0%"
+                        :y "0"
+                        :width "45%"
+                        :anchor "center")
+    :stacking "bg"
+    :wm-ignore false
+    (box :orientation "v" :space-evenly false :class "container"
+        (box :space-evenly false
+            (time)
+            (box :orientation "v" :space-evenly false
+                (battery)
+                (network)
+                (buttons)
+            )
+        )
+    )
+ )
+
+(defwidget time []
+    (box :class "widget" :hexpand true
+        (box :orientation "v" :hexpand true :space-evenly false :valign "center"
+            (label :text TIME :class "huge")
+            (label :text DATE :class "big")
+        )
+    )
+)
+
+(defwidget battery []
+    (box :class "widget" :orientation "v" :spacing "18"
+        (box :space-evenly false :spacing "18"
+            (label :text { BATTERY + "%" })
+            (scale :value BATTERY
+                   :active "false"
+                   :hexpand "true"
+                   :class BATTERY_STATUS)
+        )
+    )
+)
+
+(defwidget network []
+    (box :class "widget" :space-evenly false :spacing "18"
+        (button :onclick "alacritty -e nmtui &" :timeout "5s" NETWORK)
+        (label :hexpand true)
+        (button :onclick "alacritty -e top &" :timeout "5s" { TEMPS + "°C" })
+    )
+)
+
+(defwidget buttons []
+    (box :space-evenly false
+        (box :class "widget thin" :hexpand true
+            (circular-progress :thickness 6 :value DISK "󰋊")
+            (circular-progress :thickness 6 :value RAM "󰍛")
+        )
+        (button :class "widget thin" :onclick "~/.config/scripts/orientation" "󰢆")
+        (button :class "widget thin" :onclick "swaylock" "󰌾")
+    )
+)

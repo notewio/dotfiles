@@ -1,0 +1,64 @@
+* {
+    all: unset;
+    font-family: monospace;
+    background: transparent;
+    color: #575279;
+    font-size: 18px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.widget {
+    background: #faf4ed;
+    border-radius: 4px;
+    padding: 24px;
+    box-shadow: 2px 2px 3px #797593;
+    margin: 4px;
+}
+.widget.thin {
+    padding: 8px;
+}
+.widget.thin label {
+    font-size: 16px;
+}
+button.widget.thin {
+    background: #b4637a;
+}
+button.widget.thin label {
+    padding: 8px;
+    color: #faf4ed;
+}
+
+.big {
+    font-size: 40px;
+}
+.huge {
+    font-size: 75px;
+}
+
+scale trough {
+    all: unset;
+    border-radius: 4px;
+    background: #cecacd;
+    min-height: 12px;
+}
+
+scale trough highlight {
+    border: none;
+    border-radius: 4px 0 0 4px;
+    background: #5e8755;
+}
+
+scale.Discharging trough highlight {
+    background: #ea9d34;
+}
+
+circular-progress {
+    background: #cecacd;
+}
+circular-progress label {
+    color: #cecacd;
+}
+

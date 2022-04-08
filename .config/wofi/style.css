@@ -1,0 +1,12 @@
+#window, #entry, #input {
+  padding: 12px;
+  border-radius: 0;
+  background: #f2e9e1;
+  color: #575279;
+  font-family: monospace;
+}
+
+#entry:selected {
+  background: #b4637a;
+  color: #fffaf3;
+}

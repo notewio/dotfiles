@@ -1,0 +1,10 @@
+device = "/dev/input/by-path/pci-0000:00:15.1-platform-i2c_designware.1-event"
+
+screen_width = 10370
+screen_height = 6915
+edge_tolerance = 15
+min_distance = 320
+
+[actions]
+1_from_bottom = "wofi --show drun"
+3_down = "swaymsg kill"

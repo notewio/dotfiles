@@ -1,0 +1,34 @@
+window:
+  padding:
+    x: 24
+    y: 24
+
+font:
+  normal:
+    family: SF Mono
+
+colors:
+  primary:
+    background: '#faf4ed'
+    foreground: '#575279'
+  normal:
+    black:   '#575279'
+    red:     '#b4637a'
+    green:   '#5e8755'
+    yellow:  '#ea9d34'
+    blue:    '#286983'
+    magenta: '#907aa9'
+    cyan:    '#56949f'
+    white:   '#faf4ed'
+  bright:
+    black:   '#9893a5'
+    red:     '#b4637a'
+    green:   '#5e8755'
+    yellow:  '#ea9d34'
+    blue:    '#286983'
+    magenta: '#907aa9'
+    cyan:    '#56949f'
+    white:   '#faf4ed'
+
+key_bindings:
+  - { key: Return, mods: Alt, action: SpawnNewInstance }

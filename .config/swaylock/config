@@ -1,0 +1,9 @@
+daemonize
+line-uses-ring
+image=/home/ewio/.config/bg/lock.png
+scaling=center
+color=faf4ed
+font=monospace
+inside-ver-color=ffffff00
+ring-ver-color=ffffff00
+text-ver-color=faf4ed
